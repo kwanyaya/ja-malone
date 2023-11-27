@@ -44,7 +44,7 @@
     define('FILE_KEYS',
         [
             'img',
-            'video',
+            // 'video',
             // 'img1',
             // 'img2',
             // 'video1',
@@ -68,7 +68,7 @@
 // --Response Config
     // -res link
     // define('RES_LINK', 'https://videinsightevent.com/');
-    define('RES_LINK', 'http://localhost/jo_malone/');
+    define('RES_LINK', 'http://localhost/jm/ja-malone/');
 
 // --Sharing Page Config
     define('SHARE_INFO',
