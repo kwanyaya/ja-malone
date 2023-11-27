@@ -4,47 +4,38 @@
     define('REQ_ID', 'offline_rimowa_2023');
 
     // -request file spec
-    define('REQ_FILE_INFO',
-        [
-            'type' => 'img',
-            // 'type' => 'video',
-        ]
-    );
+    define('REQ_FILE_INFO', [
+        'type' => ['img', 'video'],
+    ]);
 
     var_dump(REQ_FILE_INFO);
     
     // -request file(s) key
-    define('REQ_FILE_KEYS', 
-        [
-            'img',
-            // 'video',
-            // 'img1',
-            // 'img2',
-            // 'video1',
-            // 'video2',
-        ]
-    );
+    define('REQ_FILE_KEYS', [
+        'img',
+        'video',
+        // 'img1',
+        // 'img2',
+        // 'video1',
+        // 'video2',
+    ]);
     
 
 // --Upload Config
     // -uploaded file spec
-    define('FILE_INFO', 
-        [
-            'dir' => '../uploads/',
-            // 'type' => 'img', 
-            // 'ext' => 'png',
-            'type' => 'video', 
-            'ext' => 'mp4'
-        ]
-    );
-
+    
+    define('FILE_INFO', [
+        'dir' => '../uploads/',
+        'type' => ['img', 'video'],
+        'ext' => ['png', 'mp4'],
+    ]);
     var_dump(FILE_INFO);
 
     // -uploaded file(s) 
     define('FILE_KEYS',
         [
             'img',
-            // 'video',
+            'video',
             // 'img1',
             // 'img2',
             // 'video1',

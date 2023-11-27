@@ -24,8 +24,8 @@ class Upload
                 return failMsg($rfk . " not found");
             }
             $this->file[] = $_FILES[$rfk];
-            $this->destination[] = $this->upload_format['dir'] . $this->genFileName($rfk) . '.' . $this->upload_format['ext'][$rfk];
-            echo $this->upload_format['dir'] . $this->genFileName($rfk) . '.' . $this->upload_format['ext'][$rfk];
+            $this->destination[] = $this->upload_format['dir'] . $this->genFileName($rfk) . '.' . $this->upload_format['ext'][$this->upload_format['type'][$rfk]];
+            echo $this->upload_format['dir'] . $this->genFileName($rfk) . '.' . $this->upload_format['ext'][$this->upload_format['type'][$rfk]];
         }
     }
 
@@ -51,11 +51,11 @@ class Upload
 
     public function checkExtension()
     {
-        foreach ($this->file as $file) {
+        foreach ($this->file as $f_key => $file) {
             $file_name = $file['name'];
             $file_ext =  explode(".", $file_name)[1];
-
-            if (!in_array($file_ext, $this->file_extension_match[$this->upload_format['type']])) {
+    
+            if (!in_array($file_ext, $this->file_extension_match[$this->upload_format['type'][$f_key]])) {
                 return false;
             }
         }
