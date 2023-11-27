@@ -1,5 +1,4 @@
 <?php
-
 // --Request Config
     // -request id
     define('REQ_ID', 'offline_rimowa_2023');
@@ -11,6 +10,8 @@
             // 'type' => 'video',
         ]
     );
+
+    var_dump(REQ_FILE_INFO);
     
     // -request file(s) key
     define('REQ_FILE_KEYS', 
@@ -30,18 +31,20 @@
     define('FILE_INFO', 
         [
             'dir' => '../uploads/',
-            'type' => 'img', 
-            'ext' => 'png'
-            // 'type' => 'video', 
-            // 'ext' => 'mp4'
+            // 'type' => 'img', 
+            // 'ext' => 'png',
+            'type' => 'video', 
+            'ext' => 'mp4'
         ]
     );
+
+    var_dump(FILE_INFO);
 
     // -uploaded file(s) 
     define('FILE_KEYS',
         [
             'img',
-            // 'video',
+            'video',
             // 'img1',
             // 'img2',
             // 'video1',
@@ -52,7 +55,7 @@
 
 // --Database Config
     // -db require
-    define('DB_REQUIRE', true);
+    define('DB_REQUIRE', false);
 
     // -db table
     define('DB_TABLE', '`offline_rimowa_2023`');
@@ -65,7 +68,7 @@
 // --Response Config
     // -res link
     // define('RES_LINK', 'https://videinsightevent.com/');
-    define('RES_LINK', 'http://localhost/ja_malone/');
+    define('RES_LINK', 'http://localhost/jo_malone/');
 
 // --Sharing Page Config
     define('SHARE_INFO',
@@ -78,22 +81,22 @@
     );
 
 
-// --Email Config
-    define('EMAIL_INFO', 
-        [
-            'username' => 'events@videinsightevent.com',
-            'password' => 'Hello123Hello123',
-            'sender_name' => 'videinsight',
-            'sender_email' => 'events@videinsightevent.com',
-            'smtp_host' => 'smtp.gmail.com',
-            'smtp_port' => 465,
-        ]
-    );
+// // --Email Config
+//     define('EMAIL_INFO', 
+//         [
+//             'username' => 'events@videinsightevent.com',
+//             'password' => 'Hello123Hello123',
+//             'sender_name' => 'videinsight',
+//             'sender_email' => 'events@videinsightevent.com',
+//             'smtp_host' => 'smtp.gmail.com',
+//             'smtp_port' => 465,
+//         ]
+//     );
 
-// --Sms Config
-    define('SMS_INFO', 
-        [
-            'sender_id' => '+8526226495103709', // SMS sender number e.g +8526226495103709
-            'sender_title' => 'videinsightevent',  // Campaign name, will not show in SMS, for correlation id use, characters only
-        ]
-    );
+// // --Sms Config
+//     define('SMS_INFO', 
+//         [
+//             'sender_id' => '+8526226495103709', // SMS sender number e.g +8526226495103709
+//             'sender_title' => 'videinsightevent',  // Campaign name, will not show in SMS, for correlation id use, characters only
+//         ]
+//     );

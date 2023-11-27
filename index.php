@@ -100,7 +100,7 @@ function handleFiles($uid){
     
     <style>
         *{
-            /* outline: 1px red solid; */
+            outline: 1px red solid;
         }
 
         body{
@@ -125,7 +125,7 @@ function handleFiles($uid){
         }
 
         .logo-container{
-            padding-top: 5%;
+            padding-top: 10%;
         }
 
         .file-container{
@@ -153,6 +153,20 @@ function handleFiles($uid){
         .share-container a{
             display: block;
         }
+
+        .share-container img{
+            width: 50%;
+        }
+
+        #download-file{
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+        }
+
+
+        
     </style>
 </head>
 <body>
@@ -234,7 +248,7 @@ function handleFiles($uid){
 
         <div class="share-container uk-flex uk-flex-center uk-margin-large-top">
             <!-- Download -->
-            <div class="">
+            <div class="download-btn">
                 <a data-auto-download id="download-file" class="uk-display-block" href="<?php echo ($upload_link); ?>" target="_blank" download="<?php echo ($download_file_name); ?>">
                     <img class="blocktouch uk-width-expand" src="./offline_assets/images/download.png" alt="">
                 </a> 
